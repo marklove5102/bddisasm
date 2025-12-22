@@ -121,8 +121,8 @@ class OutputShemu(OutputParser):
     def rdem(self, data) -> type(None):
         """
         Used for shemu result. Example:
-        Emulation terminated with status 0x0000000a, flags: 0x1000000, 1 NOPs, 0 NULLs, 62 total instructions, 61 unique instructions
-            SHEMU_FLAG_OBFUS_NEUTRAL_IMM
+        Emulation terminated with status 0x0000000a, flags: 0x2, 1 NOPs, 0 NULLs, 62 total instructions, 61 unique instructions
+            SHEMU_FLAG_LOAD_RIP
 
         Reads the given text and parse it to obtain dictionaries.
         """
