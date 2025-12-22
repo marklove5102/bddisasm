@@ -25,7 +25,7 @@ class DecodeShemuParser(object):
     def rdline(self) -> str:
         """
         Reads the line corresponding to the current index from the string containing the result.
-        This function also increment the index to the current line.
+        This function also increments the index to the current line.
         """
         if self._crt == len(self._obj):
             return None
