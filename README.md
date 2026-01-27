@@ -10,15 +10,15 @@ The Bitdefender disassembler (bddisasm) is a lightweight, x86/x64 only instructi
 4. [disasmtool](https://github.com/bitdefender/bddisasm/tree/master/disasmtool) - this project is a command line disassembler tool, used mainly as an example of how to integrate the bddisasm and bdshemu libraries.
 5. [bindings](https://github.com/bitdefender/bddisasm/tree/master/bindings) - bindings for [python](https://github.com/bitdefender/bddisasm/tree/master/bindings/pybddisasm), and [Rust](https://github.com/bitdefender/bddisasm/tree/master/bindings/rsbddisasm).
 
-## Objectives
-
-The main objectives of this disassembler are:
+## Core Features
 
 1. Lightweight - it's written in C, with no external dependencies, no memory allocated, and thread safe by design.
-2. Fast - less than 300 CPU clocks on an Intel Core i7-8650U per decoded instruction (more than 7M instructions per second).
+2. Fast - measured on an Intel® Core™ Ultra 7 165H using BDDISASM v3.0:
+   - legacy decoder: around 240 CPU clocks per decoded instruction (~12M decoded instructions per second);
+   - mini decoder: around 150 CPU clocks per decoded instruction (~17M decoded instructions per second)
 3. Resilient - tested against internal fuzzers and the famous [mishegos](https://github.com/trailofbits/mishegos) tool.
 4. Easy to work with - just include the main header file, bddisasm.h, link with the bddisasm library, and call the NdDecode API!
-5. Complete - support every x86 instruction to date, and provide as much information as possible.
+5. Complete – comprehensive support for Intel and AMD x86 instructions implemented in modern CPUs, including rich per-instruction metadata.
 
 ## Build and install
 
